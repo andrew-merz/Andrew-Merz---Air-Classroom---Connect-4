@@ -1,0 +1,34 @@
+// Start Page
+-The user will be prompted to choose a color by clicking a color button
+    -That color will be highlighted and a prompt will display "player 1: color, player 2: color" *example in wireframe 2*
+    -if the user unclicks the button, the prompt will reset and display nothing
+-Once the use chooses a color, that color will be assigned to player 1 and the other color will be assigned to player 2
+-Then the user will click the start button which will change the page to wireframe 2
+
+// WireFrame 2
+- The gameboard will be displayed
+- Player 1's chip color choice on the bottom left corner
+-Player 2's chip color will be displayed in the bottom right corner
+-In the middle of the bottom(or top) of the screen it will display the current players turn
+-Buttons will appear under each column of the board
+
+// WireFrame 3
+- When the current player hovers over the buttons under the columns, a highlighted version of their chip will appear over the corresponding column 
+-Once the button is clicked the chip will get placed to the lowest possible 'empty' space in that column
+    - once a space is filled with a chip that space can no longer be used and the next chip will be placed on top of the others in that column
+    - if a column is filled to the top the button will change colors to red and will no longer be able to be clicked 
+-Every time a chip is placed it will be checked against the winning conditions and if they are met, that player that placed the final chip will win
+
+// WireFrame 4
+- Once a player wins, the buttons disappear and a prompt appears on the top of the screen saying "player X wins"
+    - the buttons on the bottons on the bottom of the screen disappear and one large button appears prompting the players to play again
+        - Once clicked, the game resets and it brings the user back to the start page
+
+// Stretch Goals
+- If a user clicks play against computer, the computer will automatically become player 2
+    - The computer will act as player 2 and place chips on the board randomely as player 2
+        - the computer will run on a short delay to mimic a real person
+
+-After each win, there will be points added to a game counter on the side of the board
+    - The game counter will keep adding points for whoever wins that game
+-Clicking new game will set the board back to wireframe 2 but keep the scoreboard up
