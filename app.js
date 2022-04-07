@@ -1,1 +1,1 @@
-console.log("Hello World");
+const spaces = document.querySelectorAll(".game-board");
