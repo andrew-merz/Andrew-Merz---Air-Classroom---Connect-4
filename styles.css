@@ -1,1 +1,27 @@
+body {
+  background-color: rgba(169, 167, 167, 0.702);
+}
 
+.game-board {
+  display: flex;
+  height: 540px;
+  width: 630px;
+  background-color: blue;
+  margin: 0 auto;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.buttons {
+  display: flex;
+  margin: 15px;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+}
+.tile {
+  background-color: rgb(245, 245, 248);
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  border-radius: 50%;
+}
