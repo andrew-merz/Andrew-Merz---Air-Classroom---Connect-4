@@ -5,7 +5,7 @@ const button3 = document.querySelector(".btn3");
 const button4 = document.querySelector(".btn4");
 const button5 = document.querySelector(".btn5");
 const button6 = document.querySelector(".btn6");
-const button7 = document.querySelector(".btn6");
+const button7 = document.querySelector(".btn7");
 const column1 = [
   spaces[0],
   spaces[7],
@@ -63,46 +63,89 @@ const column7 = [
   spaces[41],
 ];
 
-console.log(column1);
-console.log(column2);
-console.log(column3);
-console.log(column4);
-console.log(column5);
-console.log(column6);
-console.log(column7);
 let currentPlayer = 1;
 
 const buttons = [button1, button2, button3, button4, button5, button6, button7];
-// const columns = [column1, column2, column3, column4, column5, column6, column7];
+let columns = [column1, column2, column3, column4, column5, column6, column7];
 
-// console.log(spaces.length);
-// console.log(columns[0]);
-// console.log(columns[1]);
-// console.log(columns[4]);
+console.log(buttons);
+//console.log(button7);
+console.log(columns);
 
-// for (let i = 0; i < spaces.length; i++) {
-//   spaces[i].onclick = () => {
-//     if (currentPlayer == 1) {
-//       //console.log("Works");
-//       spaces[i].classList.add("player1");
-//       currentPlayer = 2;
-//     } else if (currentPlayer == 2) {
-//       //console.log("player 2 works");
-//       spaces[i].classList.add("player2");
-//       currentPlayer = 1;
-//     }
-//   };
-// }
-for (let i = 0; i < spaces.length; i++) {
-  buttons[0].onclick = () => {
-    if (currentPlayer == 1) {
-      console.log("Works");
-      spaces[35].classList.add("player1");
-      currentPlayer = 2;
-    } else if (currentPlayer == 2) {
-      console.log("also works");
-      spaces[28].classList.add("player2");
-      currentPlayer = 1;
-    }
-  };
+for (let i = 0; i < buttons.length; i++) {
+  for (let j = 0; j < columns.length; j++) {
+    buttons[i].onclick = () => {
+      if (currentPlayer == 1) {
+        console.log("Works");
+        spaces[i].classList.add("player1");
+        currentPlayer = 2;
+      } else if (currentPlayer == 2) {
+        console.log("also works");
+        spaces[i].classList.add("player2");
+        currentPlayer = 1;
+      }
+    };
+  }
 }
+
+// let move = [];
+// for (let j = 0; j < columns.length; j++) {
+//   for (let i = 0; i < buttons.length; i++) {
+//     let choice = {
+//       buttons: buttons[1],
+//       columns: columns[1],
+//     };
+//     move.push(choice);
+//   }
+// }
+// console.log(move);
+//     for (let i = 0; i < spaces.length; i++) {
+//     buttons[b].onclick = () => {
+//       if (currentPlayer == 1) {
+//         console.log("Works");
+//         spaces[i].classList.add("player1");
+//         currentPlayer = 2;
+//       } else if (currentPlayer == 2) {
+//         console.log("also works");
+//         spaces[i].classList.add("player2");
+//         currentPlayer = 1;
+//     move.push(choice);
+//   }
+// }
+//console.log(move);
+// function fillUp() {
+//   for (let b = 0; b < buttons.length; b++) {
+//     for (let i = 0; i < spaces.length; i++) {
+//       buttons[b].onclick = () => {
+//         if (currentPlayer == 1) {
+//           console.log("Works");
+//           spaces[i].classList.add("player1");
+//           currentPlayer = 2;
+//         } else if (currentPlayer == 2) {
+//           console.log("also works");
+//           spaces[i].classList.add("player2");
+//           currentPlayer = 1;
+//         }
+//       };
+//     }
+//   }
+// }
+// fillUp();
+// function fillUp() {
+//   for (let b = 0; b < buttons.length - 1; b++) {
+//     for (let i = 0; i < columns.length; i++) {
+//       buttons[b].onclick = () => {
+//         if (currentPlayer == 1) {
+//           console.log("Works");
+//           column1[b].classList.add("player1");
+//           currentPlayer = 2;
+//         } else if (currentPlayer == 2) {
+//           console.log("also works");
+//           column1[b].classList.add("player2");
+//           currentPlayer = 1;
+//         }
+//       };
+//     }
+//   }
+// }
+// fillUp();
