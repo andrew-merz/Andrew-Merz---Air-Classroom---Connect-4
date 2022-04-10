@@ -1,4 +1,5 @@
 const spaces = document.querySelectorAll(".game-board div");
+const displayPlayer = document.querySelector(".player");
 const button1 = document.querySelector(".btn1");
 const button2 = document.querySelector(".btn2");
 const button3 = document.querySelector(".btn3");
@@ -66,86 +67,44 @@ const column7 = [
 let currentPlayer = 1;
 
 const buttons = [button1, button2, button3, button4, button5, button6, button7];
-let columns = [column1, column2, column3, column4, column5, column6, column7];
+const columns = [column1, column2, column3, column4, column5, column6, column7];
 
-console.log(buttons);
-//console.log(button7);
-console.log(columns);
-
-for (let i = 0; i < buttons.length; i++) {
-  for (let j = 0; j < columns.length; j++) {
-    buttons[i].onclick = () => {
-      if (currentPlayer == 1) {
-        console.log("Works");
-        spaces[i].classList.add("player1");
-        currentPlayer = 2;
-      } else if (currentPlayer == 2) {
-        console.log("also works");
-        spaces[i].classList.add("player2");
-        currentPlayer = 1;
-      }
-    };
-  }
-}
-
-// let move = [];
-// for (let j = 0; j < columns.length; j++) {
-//   for (let i = 0; i < buttons.length; i++) {
-//     let choice = {
-//       buttons: buttons[1],
-//       columns: columns[1],
-//     };
-//     move.push(choice);
-//   }
-// }
-// console.log(move);
-//     for (let i = 0; i < spaces.length; i++) {
-//     buttons[b].onclick = () => {
+// for (let i = 0; i < buttons.length; i++) {
+//   for (let j = 0; j < columns.length; j++) {
+//     buttons[i].onclick = () => {
 //       if (currentPlayer == 1) {
 //         console.log("Works");
 //         spaces[i].classList.add("player1");
 //         currentPlayer = 2;
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
 //       } else if (currentPlayer == 2) {
 //         console.log("also works");
 //         spaces[i].classList.add("player2");
 //         currentPlayer = 1;
-//     move.push(choice);
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+//       }
+//     };
 //   }
 // }
-//console.log(move);
-// function fillUp() {
-//   for (let b = 0; b < buttons.length; b++) {
-//     for (let i = 0; i < spaces.length; i++) {
-//       buttons[b].onclick = () => {
-//         if (currentPlayer == 1) {
-//           console.log("Works");
-//           spaces[i].classList.add("player1");
-//           currentPlayer = 2;
-//         } else if (currentPlayer == 2) {
-//           console.log("also works");
-//           spaces[i].classList.add("player2");
-//           currentPlayer = 1;
-//         }
-//       };
-//     }
-//   }
-// }
-// fillUp();
-// function fillUp() {
-//   for (let b = 0; b < buttons.length - 1; b++) {
-//     for (let i = 0; i < columns.length; i++) {
-//       buttons[b].onclick = () => {
-//         if (currentPlayer == 1) {
-//           console.log("Works");
-//           column1[b].classList.add("player1");
-//           currentPlayer = 2;
-//         } else if (currentPlayer == 2) {
-//           console.log("also works");
-//           column1[b].classList.add("player2");
-//           currentPlayer = 1;
-//         }
-//       };
-//     }
-//   }
-// }
-// fillUp();
+
+for (let i = 0; i < spaces.length; i++) {
+  spaces[i].onclick = () => {
+    //if the square below your current square is taken, you can go ontop of it
+    if (
+      spaces[i + 7].classList.contains("taken") &&
+      !spaces[i].classList.contains("taken")
+    ) {
+      if (currentPlayer == 1) {
+        spaces[i].classList.add("taken");
+        spaces[i].classList.add("player1");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+      } else if (currentPlayer == 2) {
+        spaces[i].classList.add("taken");
+        spaces[i].classList.add("player2");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+      }
+    } else alert("cant go here");
+  };
+}
