@@ -43,3 +43,6 @@ h1 {
   margin: 6px;
   border-radius: 50%;
 }
+.player {
+  text-align: center;
+}
