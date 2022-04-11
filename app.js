@@ -169,37 +169,62 @@ function checkWin() {
   }
 }
 
-// Below is the function that works for clicking on the individual spaces
-for (let i = 0; i < spaces.length; i++) {
-  spaces[i].onclick = () => {
-    //if the square below your current square is taken, you can go ontop of it
-    if (
-      spaces[i + 7].classList.contains("taken") &&
-      !spaces[i].classList.contains("taken") &&
-      activeGame == true
-    ) {
-      if (currentPlayer == 1) {
-        console.log("player one works");
-        spaces[i].classList.add("taken");
-        spaces[i].classList.add("player1");
-        currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-      } else if (currentPlayer == 2) {
-        console.log("player two works");
-        spaces[i].classList.add("taken");
-        spaces[i].classList.add("player2");
-        currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-      }
-    } else alert("cant go there");
-    checkWin();
-  };
-}
+// // Below is the function that works for clicking on the individual spaces
+// for (let i = 0; i < spaces.length; i++) {
+//   spaces[i].onclick = () => {
+//     //if the square below your current square is taken, you can go ontop of it
+//     if (
+//       spaces[i + 7].classList.contains("taken") &&
+//       !spaces[i].classList.contains("taken") &&
+//       activeGame == true
+//     ) {
+//       if (currentPlayer == 1) {
+//         console.log("player one works");
+//         spaces[i].classList.add("taken");
+//         spaces[i].classList.add("player1");
+//         currentPlayer = 2;
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+//       } else if (currentPlayer == 2) {
+//         console.log("player two works");
+//         spaces[i].classList.add("taken");
+//         spaces[i].classList.add("player2");
+//         currentPlayer = 1;
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+//       }
+//     } else alert("cant go there");
+//     checkWin();
+//   };
+// }
 
-// for (let i = 0; i < buttons.length; i++) {
-//   for (let j = 0; j < columns.length; j++) {
-//     buttons[i].onclick = () => {
-//       console.log(columns[j]);
+for (let i = 0; i < buttons.length; i++) {
+  for (let j = 0; j < columns.length; j++) {
+    for (let k = 0; k < spaces.length; k++) {
+      buttons[i].onclick = () => {
+        console.log(columns[i][5]);
+        if (
+          spaces[i + 7].classList.contains("taken") &&
+          !spaces[i].classList.contains("taken") &&
+          activeGame == true
+        ) {
+          if (currentPlayer == 1) {
+            console.log("player one works");
+            spaces[i].classList.add("taken");
+            spaces[i].classList.add("player1");
+            currentPlayer = 2;
+            displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+          } else if (currentPlayer == 2) {
+            console.log("player two works");
+            spaces[i].classList.add("taken");
+            spaces[i].classList.add("player2");
+            currentPlayer = 1;
+            displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+          }
+        } else alert("cant go there");
+        checkWin();
+      };
+    }
+  }
+}
 //       //if the square below your current square is taken, you can go ontop of it
 //       if (
 //         columns[0][5].classList.contains("taken") &&
@@ -221,33 +246,6 @@ for (let i = 0; i < spaces.length; i++) {
 //         }
 //       } else alert("cant go here");
 //       checkWin();
-//     };
-//   }
-// }
-
-// const buttons = {
-//   button2: [
-//     spaces[1],
-//     spaces[8],
-//     spaces[15],
-//     spaces[22],
-//     spaces[29],
-//     spaces[36],
-//   ],
-//   button3: [
-//     spaces[2],
-//     spaces[9],
-//     spaces[16],
-//     spaces[23],
-//     spaces[30],
-//     spaces[37],
-//   ],
-// };
-// console.log(buttons);
-// for (let i = 0; i < buttons.length; i++) {
-//   for (let j = 0; j < spaces.length; j++) {
-//     buttons[i].onclick = () => {
-//       console.log("it worked");
 //     };
 //   }
 // }
