@@ -139,7 +139,7 @@ let currentPlayer = 1;
 let activeGame = true;
 const buttons = [button1, button2, button3, button4, button5, button6, button7];
 const columns = [column1, column2, column3, column4, column5, column6, column7];
-
+let classes = { button1: column1 };
 // Based on the tic tac toe winning conditins, for every space in the winning array , the function will check if there is a winning combination
 function checkWin() {
   for (let i = 0; i < winningCombos.length; i++) {
@@ -211,32 +211,32 @@ function checkWin() {
 //     checkWin();
 //   };
 // }
+
 for (let i = 0; i < buttons.length; i++) {
   for (let j = 0; j < columns.length; j++) {
-    for (let k = 0; k < spaces.length; k++) {
-      buttons[i].onclick = () => {
-        //if the square below your current square is taken, you can go ontop of it
-        if (
-          spaces[k + 7].classList.contains("taken") &&
-          !spaces[k].classList.contains("taken") &&
-          activeGame === true
-        ) {
-          if (currentPlayer == 1) {
-            console.log("player one works");
-            spaces[k].classList.add("taken");
-            spaces[k].classList.add("player1");
-            currentPlayer = 2;
-            displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-          } else if (currentPlayer == 2) {
-            console.log("player two works");
-            spaces[k].classList.add("taken");
-            spaces[k].classList.add("player2");
-            currentPlayer = 1;
-            displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-          }
-        } else alert("cant go here");
-        checkWin();
-      };
-    }
+    buttons[i].onclick = () => {
+      console.log(columns[j]);
+      //if the square below your current square is taken, you can go ontop of it
+      if (
+        columns[0][5].classList.contains("taken") &&
+        !spaces[j].classList.contains("taken") &&
+        activeGame === true
+      ) {
+        if (currentPlayer == 1) {
+          console.log("player one works");
+          spaces[k].classList.add("taken");
+          spaces[k].classList.add("player1");
+          currentPlayer = 2;
+          displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+        } else if (currentPlayer == 2) {
+          console.log("player two works");
+          spaces[k].classList.add("taken");
+          spaces[k].classList.add("player2");
+          currentPlayer = 1;
+          displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+        }
+      } else alert("cant go here");
+      checkWin();
+    };
   }
 }

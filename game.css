@@ -1,5 +1,6 @@
 body {
   background-color: rgba(169, 167, 167, 0.702);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 h1 {
   text-align: center;
@@ -14,12 +15,12 @@ h1 {
   flex-wrap: wrap;
 }
 .buttons {
-  display: inline-block;
+  display: flex;
+  background-color: azure;
   margin: 15px;
   text-align: center;
-  position: absolute;
-  left: 25%;
   padding: 20px;
+  justify-content: space-around;
 }
 .game-board div {
   background-color: rgb(172, 172, 172);
