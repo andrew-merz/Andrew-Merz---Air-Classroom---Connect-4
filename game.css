@@ -20,7 +20,7 @@ h1 {
   margin: 15px;
   text-align: center;
   padding: 20px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .game-board div {
   background-color: rgb(172, 172, 172);
@@ -46,4 +46,7 @@ h1 {
 }
 .player {
   text-align: center;
+}
+.winner {
+  border: 4px solid rgb(72, 229, 11);
 }
