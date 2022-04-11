@@ -196,26 +196,56 @@ function checkWin() {
 //   };
 // }
 
-for (let i = 0; i < buttons.length; i++) {
+// for (let b = 0; b < buttons.length; b++) {
+//   for (let j = 0; j < columns.length; j++) {
+//     for (let i = 0; i < spaces.length; i++) {
+//       buttons[b].onclick = () => {
+//         console.log(spaces[b + 35]);
+//         //if the square below your current square is taken, you can go ontop of it
+//         if (
+//           spaces[b + 42].classList.contains("taken") &&
+//           !spaces[b + 35].classList.contains("taken") &&
+//           activeGame == true
+//         ) {
+//           if (currentPlayer == 1) {
+//             console.log("player one works");
+//             spaces[b + 35].classList.add("taken");
+//             spaces[b + 35].classList.add("player1");
+//             currentPlayer = 2;
+//             displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+//           } else if (currentPlayer == 2) {
+//             console.log("player two works");
+//             spaces[b + 35].classList.add("taken");
+//             spaces[b + 35].classList.add("player2");
+//             currentPlayer = 1;
+//             displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+//           }
+//         } else alert("cant go there");
+//         checkWin();
+//       };
+//     }
+//   }
+// }
+for (let b = 0; b < buttons.length; b++) {
   for (let j = 0; j < columns.length; j++) {
-    for (let k = 0; k < spaces.length; k++) {
-      buttons[i].onclick = () => {
-        console.log(columns[i][5]);
+    for (let i = 0; i < spaces.length; i++) {
+      buttons[b].onclick = () => {
+        //if the square below your current square is taken, you can go ontop of it
         if (
-          spaces[i + 7].classList.contains("taken") &&
-          !spaces[i].classList.contains("taken") &&
+          spaces[b].classList.contains("taken") &&
+          !spaces[b].classList.contains("taken") &&
           activeGame == true
         ) {
           if (currentPlayer == 1) {
             console.log("player one works");
-            spaces[i].classList.add("taken");
-            spaces[i].classList.add("player1");
+            spaces[b + 35].classList.add("taken");
+            spaces[b + 35].classList.add("player1");
             currentPlayer = 2;
             displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
           } else if (currentPlayer == 2) {
             console.log("player two works");
-            spaces[i].classList.add("taken");
-            spaces[i].classList.add("player2");
+            spaces[b + 35].classList.add("taken");
+            spaces[b + 35].classList.add("player2");
             currentPlayer = 1;
             displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
           }
@@ -225,27 +255,29 @@ for (let i = 0; i < buttons.length; i++) {
     }
   }
 }
-//       //if the square below your current square is taken, you can go ontop of it
-//       if (
-//         columns[0][5].classList.contains("taken") &&
-//         !spaces[j].classList.contains("taken") &&
-//         activeGame === true
-//       ) {
-//         if (currentPlayer == 1) {
-//           console.log("player one works");
-//           spaces[k].classList.add("taken");
-//           spaces[k].classList.add("player1");
-//           currentPlayer = 2;
-//           displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-//         } else if (currentPlayer == 2) {
-//           console.log("player two works");
-//           spaces[k].classList.add("taken");
-//           spaces[k].classList.add("player2");
-//           currentPlayer = 1;
-//           displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-//         }
-//       } else alert("cant go here");
-//       checkWin();
-//     };
-//   }
+
+// for (let i = 0; i < spaces.length; i++) {
+//   buttons[i].onclick = () => {
+//     //if the square below your current square is taken, you can go ontop of it
+//     if (
+//       spaces[i + 7].classList.contains("taken") &&
+//       !spaces[i].classList.contains("taken") &&
+//       activeGame == true
+//     ) {
+//       if (currentPlayer == 1) {
+//         console.log("player one works");
+//         spaces[i].classList.add("taken");
+//         spaces[i].classList.add("player1");
+//         currentPlayer = 2;
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+//       } else if (currentPlayer == 2) {
+//         console.log("player two works");
+//         spaces[i].classList.add("taken");
+//         spaces[i].classList.add("player2");
+//         currentPlayer = 1;
+//         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+//       }
+//     } else alert("cant go there");
+//     checkWin();
+//   };
 // }
