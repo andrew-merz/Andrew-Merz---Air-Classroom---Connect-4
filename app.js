@@ -163,8 +163,8 @@ function checkWin() {
       space3.classList.contains("player2") &&
       space4.classList.contains("player2")
     ) {
-      displayPlayer.innerHTML = "<h3>Game Over: Player 2 Wins!!!</h3>";
       activeGame = false;
+      displayPlayer.innerHTML = "<h3>Game Over: Player 2 Wins!!!</h3>";
     }
   }
 }
@@ -221,6 +221,33 @@ for (let i = 0; i < spaces.length; i++) {
 //         }
 //       } else alert("cant go here");
 //       checkWin();
+//     };
+//   }
+// }
+
+// const buttons = {
+//   button2: [
+//     spaces[1],
+//     spaces[8],
+//     spaces[15],
+//     spaces[22],
+//     spaces[29],
+//     spaces[36],
+//   ],
+//   button3: [
+//     spaces[2],
+//     spaces[9],
+//     spaces[16],
+//     spaces[23],
+//     spaces[30],
+//     spaces[37],
+//   ],
+// };
+// console.log(buttons);
+// for (let i = 0; i < buttons.length; i++) {
+//   for (let j = 0; j < spaces.length; j++) {
+//     buttons[i].onclick = () => {
+//       console.log("it worked");
 //     };
 //   }
 // }

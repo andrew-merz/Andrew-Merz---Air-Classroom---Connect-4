@@ -17,10 +17,20 @@ h1 {
 .buttons {
   display: flex;
   background-color: azure;
-  margin: 15px;
+  margin: 0 auto;
   text-align: center;
-  padding: 20px;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  height: 90px;
+  width: 630px;
+  flex-wrap: wrap;
+}
+button {
+  height: 70px;
+  width: 70px;
+  margin-top: 10px;
+  background-color: green;
+  border-radius: 15%;
+  color: aliceblue;
 }
 .game-board div {
   background-color: rgb(172, 172, 172);
