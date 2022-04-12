@@ -169,7 +169,7 @@ function checkWin() {
   }
 }
 
-// Below is the function that works for clicking on the individual spaces
+//Below is the function that works for clicking on the individual spaces
 // for (let i = 0; i < spaces.length; i++) {
 //   spaces[i].onclick = () => {
 //     //if the square below your current square is taken, you can go ontop of it
@@ -191,42 +191,60 @@ function checkWin() {
 //         currentPlayer = 1;
 //         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
 //       }
-//     } else alert("cant go there");
+//     } else displayPlayer.innerHTML = "<h3>Cant Go there</h3>";
 //     checkWin();
 //   };
 // }
 
-// for (let b = 0; b < buttons.length; b++) {
-//   for (let j = 0; j < columns.length; j++) {
-//     for (let i = 0; i < spaces.length; i++) {
-//       buttons[b].onclick = () => {
-//         console.log(spaces[b + 35]);
-//         //if the square below your current square is taken, you can go ontop of it
-//         if (
-//           spaces[b + 42].classList.contains("taken") &&
-//           !spaces[b + 35].classList.contains("taken") &&
-//           activeGame == true
-//         ) {
-//           if (currentPlayer == 1) {
-//             console.log("player one works");
-//             spaces[b + 35].classList.add("taken");
-//             spaces[b + 35].classList.add("player1");
-//             currentPlayer = 2;
-//             displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-//           } else if (currentPlayer == 2) {
-//             console.log("player two works");
-//             spaces[b + 35].classList.add("taken");
-//             spaces[b + 35].classList.add("player2");
-//             currentPlayer = 1;
-//             displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-//           }
-//         } else alert("cant go there");
-//         checkWin();
-//       };
-//     }
-//   }
-// }
-
-button2.onclick = () => {
-  console.log(column2[5]);
-};
+//Button Functions
+button1.addEventListener("click", () => {
+  for (let i = column1.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1) {
+      if (!column1[i].classList.contains("taken")) {
+        column1[i].classList.add("player1");
+        column1[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+        checkWin();
+        break;
+      }
+      checkWin();
+    }
+    if (currentPlayer == 2) {
+      if (!column1[i].classList.contains("taken")) {
+        column1[i].classList.add("player2");
+        column1[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+        checkWin();
+        break;
+      }
+    }
+  }
+  checkWin();
+});
+button2.addEventListener("click", () => {
+  for (i = column2.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column2[i].classList.contains("taken")) {
+        column2[i].classList.add("player1");
+        column2[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+      checkWin();
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column2[i].classList.contains("taken")) {
+        column2[i].classList.add("player2");
+        column2[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  } //else displayPlayer.innerHTML = "<h3>Cant Go there</h3>"
+  checkWin();
+});
