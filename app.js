@@ -169,7 +169,7 @@ function checkWin() {
   }
 }
 
-// // Below is the function that works for clicking on the individual spaces
+// Below is the function that works for clicking on the individual spaces
 // for (let i = 0; i < spaces.length; i++) {
 //   spaces[i].onclick = () => {
 //     //if the square below your current square is taken, you can go ontop of it
@@ -226,58 +226,7 @@ function checkWin() {
 //     }
 //   }
 // }
-for (let b = 0; b < buttons.length; b++) {
-  for (let j = 0; j < columns.length; j++) {
-    for (let i = 0; i < spaces.length; i++) {
-      buttons[b].onclick = () => {
-        //if the square below your current square is taken, you can go ontop of it
-        if (
-          spaces[b].classList.contains("taken") &&
-          !spaces[b].classList.contains("taken") &&
-          activeGame == true
-        ) {
-          if (currentPlayer == 1) {
-            console.log("player one works");
-            spaces[b + 35].classList.add("taken");
-            spaces[b + 35].classList.add("player1");
-            currentPlayer = 2;
-            displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-          } else if (currentPlayer == 2) {
-            console.log("player two works");
-            spaces[b + 35].classList.add("taken");
-            spaces[b + 35].classList.add("player2");
-            currentPlayer = 1;
-            displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-          }
-        } else alert("cant go there");
-        checkWin();
-      };
-    }
-  }
-}
 
-// for (let i = 0; i < spaces.length; i++) {
-//   buttons[i].onclick = () => {
-//     //if the square below your current square is taken, you can go ontop of it
-//     if (
-//       spaces[i + 7].classList.contains("taken") &&
-//       !spaces[i].classList.contains("taken") &&
-//       activeGame == true
-//     ) {
-//       if (currentPlayer == 1) {
-//         console.log("player one works");
-//         spaces[i].classList.add("taken");
-//         spaces[i].classList.add("player1");
-//         currentPlayer = 2;
-//         displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-//       } else if (currentPlayer == 2) {
-//         console.log("player two works");
-//         spaces[i].classList.add("taken");
-//         spaces[i].classList.add("player2");
-//         currentPlayer = 1;
-//         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-//       }
-//     } else alert("cant go there");
-//     checkWin();
-//   };
-// }
+button2.onclick = () => {
+  console.log(column2[5]);
+};
