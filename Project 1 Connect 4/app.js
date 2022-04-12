@@ -333,29 +333,26 @@ button7.addEventListener("click", () => {
 });
 // Mouse over functions
 // Mouse1
-//function mouse1() {
-//   if (currentPlayer == 1 && activeGame == true) {
-//     button1.addEventListener("mouseover", () => {
+// function mouse1() {
+//   button1.addEventListener("mouseover", () => {
+//     if (currentPlayer == 1 && activeGame == true) {
 //       highlight1.classList.add("player1highlight");
-//       console.log("works");
 //       button1.addEventListener("mouseout", () => {
 //         highlight1.classList.remove("player1highlight");
-//         console.log("also works");
 //       });
-//     });
-//   } else
-//   if ((currentPlayer = 2 && activeGame == true)) {
+//     }
+//   });
+//   if (currentPlayer == 2 && activeGame == true) {
 //     button1.addEventListener("mouseover", () => {
 //       highlight1.classList.add("player2highlight");
-//       console.log("works");
 //       button1.addEventListener("mouseout", () => {
 //         highlight1.classList.remove("player2highlight");
-//         console.log("also works");
 //       });
 //     });
 //   }
 // }
 // mouse1();
+
 //Below is the function that works for clicking on the individual spaces
 // for (let i = 0; i < spaces.length; i++) {
 //   spaces[i].onclick = () => {
