@@ -169,6 +169,170 @@ function checkWin() {
   }
 }
 
+//Button Functions
+button1.addEventListener("click", () => {
+  for (let i = column1.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column1[i].classList.contains("taken")) {
+        column1[i].classList.add("player1");
+        column1[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    }
+    if (currentPlayer == 2 && activeGame == true) {
+      if (!column1[i].classList.contains("taken")) {
+        column1[i].classList.add("player2");
+        column1[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button2.addEventListener("click", () => {
+  for (i = column2.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column2[i].classList.contains("taken")) {
+        column2[i].classList.add("player1");
+        column2[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column2[i].classList.contains("taken")) {
+        column2[i].classList.add("player2");
+        column2[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button3.addEventListener("click", () => {
+  for (i = column3.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column3[i].classList.contains("taken")) {
+        column3[i].classList.add("player1");
+        column3[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column3[i].classList.contains("taken")) {
+        column3[i].classList.add("player2");
+        column3[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button4.addEventListener("click", () => {
+  for (i = column4.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column4[i].classList.contains("taken")) {
+        column4[i].classList.add("player1");
+        column4[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column4[i].classList.contains("taken")) {
+        column4[i].classList.add("player2");
+        column4[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button5.addEventListener("click", () => {
+  for (i = column5.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column5[i].classList.contains("taken")) {
+        column5[i].classList.add("player1");
+        column5[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column5[i].classList.contains("taken")) {
+        column5[i].classList.add("player2");
+        column5[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button6.addEventListener("click", () => {
+  for (i = column6.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column6[i].classList.contains("taken")) {
+        column6[i].classList.add("player1");
+        column6[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column6[i].classList.contains("taken")) {
+        column6[i].classList.add("player2");
+        column6[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+button7.addEventListener("click", () => {
+  for (i = column7.length - 1; i >= 0; i--) {
+    if (currentPlayer == 1 && activeGame == true) {
+      if (!column7[i].classList.contains("taken")) {
+        column7[i].classList.add("player1");
+        column7[i].classList.add("taken");
+        currentPlayer = 2;
+        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        checkWin();
+        break;
+      }
+    } else if (currentPlayer == 2 && activeGame == true) {
+      if (!column7[i].classList.contains("taken")) {
+        column7[i].classList.add("player2");
+        column7[i].classList.add("taken");
+        currentPlayer = 1;
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        checkWin();
+        break;
+      }
+    }
+  }
+});
+
 //Below is the function that works for clicking on the individual spaces
 // for (let i = 0; i < spaces.length; i++) {
 //   spaces[i].onclick = () => {
@@ -195,56 +359,3 @@ function checkWin() {
 //     checkWin();
 //   };
 // }
-
-//Button Functions
-button1.addEventListener("click", () => {
-  for (let i = column1.length - 1; i >= 0; i--) {
-    if (currentPlayer == 1) {
-      if (!column1[i].classList.contains("taken")) {
-        column1[i].classList.add("player1");
-        column1[i].classList.add("taken");
-        currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-        checkWin();
-        break;
-      }
-      checkWin();
-    }
-    if (currentPlayer == 2) {
-      if (!column1[i].classList.contains("taken")) {
-        column1[i].classList.add("player2");
-        column1[i].classList.add("taken");
-        currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-        checkWin();
-        break;
-      }
-    }
-  }
-  checkWin();
-});
-button2.addEventListener("click", () => {
-  for (i = column2.length - 1; i >= 0; i--) {
-    if (currentPlayer == 1 && activeGame == true) {
-      if (!column2[i].classList.contains("taken")) {
-        column2[i].classList.add("player1");
-        column2[i].classList.add("taken");
-        currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
-        checkWin();
-        break;
-      }
-      checkWin();
-    } else if (currentPlayer == 2 && activeGame == true) {
-      if (!column2[i].classList.contains("taken")) {
-        column2[i].classList.add("player2");
-        column2[i].classList.add("taken");
-        currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
-        checkWin();
-        break;
-      }
-    }
-  } //else displayPlayer.innerHTML = "<h3>Cant Go there</h3>"
-  checkWin();
-});
