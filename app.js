@@ -1,4 +1,5 @@
 const spaces = document.querySelectorAll(".game-board div");
+const highlight1 = document.querySelector(".highlight1");
 const displayPlayer = document.querySelector(".player");
 const button1 = document.querySelector(".btn1");
 const button2 = document.querySelector(".btn2");
@@ -137,8 +138,6 @@ const winningCombos = [
 
 let currentPlayer = 1;
 let activeGame = true;
-const buttons = [button1, button2, button3, button4, button5, button6, button7];
-const columns = [column1, column2, column3, column4, column5, column6, column7];
 
 // Based on the tic tac toe winning conditins, for every space in the winning array , the function will check if there is a winning combination
 function checkWin() {
@@ -201,7 +200,7 @@ button2.addEventListener("click", () => {
         column2[i].classList.add("player1");
         column2[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -224,7 +223,7 @@ button3.addEventListener("click", () => {
         column3[i].classList.add("player1");
         column3[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -247,7 +246,7 @@ button4.addEventListener("click", () => {
         column4[i].classList.add("player1");
         column4[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -270,7 +269,7 @@ button5.addEventListener("click", () => {
         column5[i].classList.add("player1");
         column5[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -293,7 +292,7 @@ button6.addEventListener("click", () => {
         column6[i].classList.add("player1");
         column6[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -316,7 +315,7 @@ button7.addEventListener("click", () => {
         column7[i].classList.add("player1");
         column7[i].classList.add("taken");
         currentPlayer = 2;
-        displayPlayer.innerHTML = "<h3>Current Plpayer: Player 2</h3>";
+        displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
         checkWin();
         break;
       }
@@ -332,7 +331,31 @@ button7.addEventListener("click", () => {
     }
   }
 });
-
+// Mouse over functions
+// Mouse1
+//function mouse1() {
+//   if (currentPlayer == 1 && activeGame == true) {
+//     button1.addEventListener("mouseover", () => {
+//       highlight1.classList.add("player1highlight");
+//       console.log("works");
+//       button1.addEventListener("mouseout", () => {
+//         highlight1.classList.remove("player1highlight");
+//         console.log("also works");
+//       });
+//     });
+//   } else
+//   if ((currentPlayer = 2 && activeGame == true)) {
+//     button1.addEventListener("mouseover", () => {
+//       highlight1.classList.add("player2highlight");
+//       console.log("works");
+//       button1.addEventListener("mouseout", () => {
+//         highlight1.classList.remove("player2highlight");
+//         console.log("also works");
+//       });
+//     });
+//   }
+// }
+// mouse1();
 //Below is the function that works for clicking on the individual spaces
 // for (let i = 0; i < spaces.length; i++) {
 //   spaces[i].onclick = () => {
