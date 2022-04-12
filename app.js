@@ -1,5 +1,11 @@
 const spaces = document.querySelectorAll(".game-board div");
 const highlight1 = document.querySelector(".highlight1");
+const highlight2 = document.querySelector(".highlight2");
+const highlight3 = document.querySelector(".highlight3");
+const highlight4 = document.querySelector(".highlight4");
+const highlight5 = document.querySelector(".highlight5");
+const highlight6 = document.querySelector(".highlight6");
+const highlight7 = document.querySelector(".highlight7");
 const displayPlayer = document.querySelector(".player");
 const button1 = document.querySelector(".btn1");
 const button2 = document.querySelector(".btn2");
@@ -332,50 +338,57 @@ button7.addEventListener("click", () => {
   }
 });
 // Mouse over functions
-// Mouse1
-// function mouse1() {
-//   button1.addEventListener("mouseover", () => {
-//     if (currentPlayer == 1 && activeGame == true) {
-//       highlight1.classList.add("player1highlight");
-//       button1.addEventListener("mouseout", () => {
-//         highlight1.classList.remove("player1highlight");
-//       });
-//     }
-//   });
-//   if (currentPlayer == 2 && activeGame == true) {
-//     button1.addEventListener("mouseover", () => {
-//       highlight1.classList.add("player2highlight");
-//       button1.addEventListener("mouseout", () => {
-//         highlight1.classList.remove("player2highlight");
-//       });
-//     });
-//   }
-// }
-// mouse1();
 
-//Below is the function that works for clicking on the individual spaces
-// for (let i = 0; i < spaces.length; i++) {
-//   spaces[i].onclick = () => {
-//     //if the square below your current square is taken, you can go ontop of it
-//     if (
-//       spaces[i + 7].classList.contains("taken") &&
-//       !spaces[i].classList.contains("taken") &&
-//       activeGame == true
-//     ) {
-//       if (currentPlayer == 1) {
-//         console.log("player one works");
-//         spaces[i].classList.add("taken");
-//         spaces[i].classList.add("player1");
-//         currentPlayer = 2;
-//         displayPlayer.innerHTML = "<h3>Current Player: Player 2</h3>";
-//       } else if (currentPlayer == 2) {
-//         console.log("player two works");
-//         spaces[i].classList.add("taken");
-//         spaces[i].classList.add("player2");
-//         currentPlayer = 1;
-//         displayPlayer.innerHTML = "<h3>Current Player: Player 1</h3>";
-//       }
-//     } else displayPlayer.innerHTML = "<h3>Cant Go there</h3>";
-//     checkWin();
-//   };
-// }
+// Mouse1
+button1.addEventListener("mouseover", () => {
+  if (currentPlayer == 1 && activeGame == true) {
+    highlight1.classList.add("player1highlight");
+    button1.addEventListener("mouseout", () => {
+      highlight1.classList.remove("player1highlight");
+    });
+  }
+  if (currentPlayer == 2 && activeGame == true) {
+    button1.addEventListener("mouseover", () => {
+      highlight1.classList.add("player2highlight");
+      button1.addEventListener("mouseout", () => {
+        highlight1.classList.remove("player2highlight");
+      });
+    });
+  }
+});
+
+// Mouse2
+button2.addEventListener("mouseover", () => {
+  if (currentPlayer == 1 && activeGame == true) {
+    highlight2.classList.add("player1highlight");
+    button2.addEventListener("mouseout", () => {
+      highlight2.classList.remove("player1highlight");
+    });
+  }
+  if (currentPlayer == 2 && activeGame == true) {
+    button2.addEventListener("mouseover", () => {
+      highlight2.classList.add("player2highlight");
+      button2.addEventListener("mouseout", () => {
+        highlight2.classList.remove("player2highlight");
+      });
+    });
+  }
+});
+
+// Mouse3
+button3.addEventListener("mouseover", () => {
+  if (currentPlayer == 1 && activeGame == true) {
+    highlight3.classList.add("player1highlight");
+    button3.addEventListener("mouseout", () => {
+      highlight3.classList.remove("player1highlight");
+    });
+  }
+  if (currentPlayer == 2 && activeGame == true) {
+    button3.addEventListener("mouseover", () => {
+      highlight3.classList.add("player2highlight");
+      button3.addEventListener("mouseout", () => {
+        highlight3.classList.remove("player2highlight");
+      });
+    });
+  }
+});
