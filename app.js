@@ -215,7 +215,7 @@ button2.addEventListener("click", () => {
         column2[i].classList.add("player2");
         column2[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
@@ -238,7 +238,7 @@ button3.addEventListener("click", () => {
         column3[i].classList.add("player2");
         column3[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
@@ -261,7 +261,7 @@ button4.addEventListener("click", () => {
         column4[i].classList.add("player2");
         column4[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
@@ -284,7 +284,7 @@ button5.addEventListener("click", () => {
         column5[i].classList.add("player2");
         column5[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
@@ -307,7 +307,7 @@ button6.addEventListener("click", () => {
         column6[i].classList.add("player2");
         column6[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
@@ -330,7 +330,7 @@ button7.addEventListener("click", () => {
         column7[i].classList.add("player2");
         column7[i].classList.add("taken");
         currentPlayer = 1;
-        displayPlayer.innerHTML = "<h3> Current Player: Player 1";
+        displayPlayer.innerHTML = "<h3> Current Player: Player 1</h3>";
         checkWin();
         break;
       }
