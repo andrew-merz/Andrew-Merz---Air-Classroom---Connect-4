@@ -1,5 +1,4 @@
 const spaces = document.querySelectorAll(".game-board div");
-const highlight = document.querySelectorAll(".highlight");
 const highlight1 = document.querySelector(".highlight1");
 const highlight2 = document.querySelector(".highlight2");
 const highlight3 = document.querySelector(".highlight3");
