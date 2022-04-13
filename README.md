@@ -8,8 +8,6 @@ screenshots:
 ![Screen Shot 2022-04-12 at 8 56 34 PM](https://user-images.githubusercontent.com/100104797/163078856-51fb91d6-503a-45ab-8eee-e9a1dba8c6d0.png)
 ![Screen Shot 2022-04-12 at 8 57 15 PM](https://user-images.githubusercontent.com/100104797/163078864-567bfdb5-9182-4ab0-a141-af39287b34ea.png)
 
-
-
 Technologies Useds:
 -JavaScript
 -HTML
@@ -17,7 +15,7 @@ Technologies Useds:
 
 Getting Started:
 
-Click on this link to get started:
+Click on this link to get started: https://andrew-merz.github.io/Project-1-Connect-4/
 
 1. Click Start to start the game
 2. Player 1 is assigned the red chip and player 2 is assigned the yellow chip
