@@ -1,4 +1,5 @@
 const spaces = document.querySelectorAll(".game-board div");
+const highlight = document.querySelectorAll(".highlight");
 const highlight1 = document.querySelector(".highlight1");
 const highlight2 = document.querySelector(".highlight2");
 const highlight3 = document.querySelector(".highlight3");
@@ -340,61 +341,73 @@ button7.addEventListener("click", () => {
 // Mouse over functions
 
 // Mouse1
-// button1.addEventListener("mousover", () => {
-//   highlight1.classList.toggle("show");
-// });
 
 button1.addEventListener("mouseover", () => {
-  console.log(currentPlayer);
-  if (currentPlayer == 1 && activeGame == true) {
-    highlight1.classList.add("player1highlight");
+  if (activeGame == true) {
+    highlight1.classList.add("player-highlight");
     button1.addEventListener("mouseout", () => {
-      highlight1.classList.remove("player1highlight");
-      console.log(highlight1.class);
-    });
-  }
-  if (currentPlayer == 2 && activeGame == true) {
-    button1.addEventListener("mouseover", () => {
-      highlight1.classList.add("player2highlight");
-      button1.addEventListener("mouseout", () => {
-        highlight1.classList.remove("player2highlight");
-      });
+      highlight1.classList.remove("player-highlight");
     });
   }
 });
 
 // Mouse2
+
 button2.addEventListener("mouseover", () => {
-  if (currentPlayer == 1 && activeGame == true) {
-    highlight2.classList.add("player1highlight");
+  if (activeGame == true) {
+    highlight2.classList.add("player-highlight");
     button2.addEventListener("mouseout", () => {
-      highlight2.classList.remove("player1highlight");
-    });
-  }
-  if (currentPlayer == 2 && activeGame == true) {
-    button2.addEventListener("mouseover", () => {
-      highlight2.classList.add("player2highlight");
-      button2.addEventListener("mouseout", () => {
-        highlight2.classList.remove("player2highlight");
-      });
+      highlight2.classList.remove("player-highlight");
     });
   }
 });
 
 // Mouse3
 button3.addEventListener("mouseover", () => {
-  if (currentPlayer == 1 && activeGame == true) {
-    highlight3.classList.add("player1highlight");
+  if (activeGame == true) {
+    highlight3.classList.add("player-highlight");
     button3.addEventListener("mouseout", () => {
-      highlight3.classList.remove("player1highlight");
+      highlight3.classList.remove("player-highlight");
     });
   }
-  if (currentPlayer == 2 && activeGame == true) {
-    button3.addEventListener("mouseover", () => {
-      highlight3.classList.add("player2highlight");
-      button3.addEventListener("mouseout", () => {
-        highlight3.classList.remove("player2highlight");
-      });
+});
+
+//Mouse4
+button4.addEventListener("mouseover", () => {
+  if (activeGame == true) {
+    highlight4.classList.add("player-highlight");
+    button4.addEventListener("mouseout", () => {
+      highlight4.classList.remove("player-highlight");
+    });
+  }
+});
+
+//Mouse5
+button5.addEventListener("mouseover", () => {
+  if (activeGame == true) {
+    highlight5.classList.add("player-highlight");
+    button5.addEventListener("mouseout", () => {
+      highlight5.classList.remove("player-highlight");
+    });
+  }
+});
+
+//Mouse6
+button6.addEventListener("mouseover", () => {
+  if (activeGame == true) {
+    highlight6.classList.add("player-highlight");
+    button6.addEventListener("mouseout", () => {
+      highlight6.classList.remove("player-highlight");
+    });
+  }
+});
+
+//Mouse7
+button7.addEventListener("mouseover", () => {
+  if (activeGame == true) {
+    highlight7.classList.add("player-highlight");
+    button7.addEventListener("mouseout", () => {
+      highlight7.classList.remove("player-highlight");
     });
   }
 });

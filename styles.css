@@ -1,6 +1,14 @@
 body {
   background-color: rgba(169, 167, 167, 0.702);
   text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.h1 {
+  font-size: xx-large;
+}
+.type {
+  text-align: center;
+  font-size: larger;
 }
 .choose-color .red {
   height: 70px;

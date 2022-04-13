@@ -5,6 +5,7 @@ body {
 h1 {
   text-align: center;
 }
+
 .game-board {
   display: flex;
   height: 540px;
@@ -74,8 +75,8 @@ button {
   margin: 6px;
   border-radius: 50%;
 }
-.player1highlight {
-  background-color: red;
+.player-highlight {
+  background-color: rgba(52, 193, 5, 0.487);
   height: 70px;
   width: 70px;
   margin: 6px;
