@@ -340,11 +340,17 @@ button7.addEventListener("click", () => {
 // Mouse over functions
 
 // Mouse1
+// button1.addEventListener("mousover", () => {
+//   highlight1.classList.toggle("show");
+// });
+
 button1.addEventListener("mouseover", () => {
+  console.log(currentPlayer);
   if (currentPlayer == 1 && activeGame == true) {
     highlight1.classList.add("player1highlight");
     button1.addEventListener("mouseout", () => {
       highlight1.classList.remove("player1highlight");
+      console.log(highlight1.class);
     });
   }
   if (currentPlayer == 2 && activeGame == true) {
