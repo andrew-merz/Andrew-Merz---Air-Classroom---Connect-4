@@ -8,7 +8,7 @@ screenshots:
 ![Screen Shot 2022-04-12 at 8 56 34 PM](https://user-images.githubusercontent.com/100104797/163078856-51fb91d6-503a-45ab-8eee-e9a1dba8c6d0.png)
 ![Screen Shot 2022-04-12 at 8 57 15 PM](https://user-images.githubusercontent.com/100104797/163078864-567bfdb5-9182-4ab0-a141-af39287b34ea.png)
 
-Technologies Useds:
+Technologies Used:
 -JavaScript
 -HTML
 -CSS
